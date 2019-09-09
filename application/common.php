@@ -20,7 +20,7 @@ use Aliyun\Api\Sms\Request\V20170525\SendSmsRequest;
 
 /**
  * 短信发送
- * @param $to    接收人
+ * @param $to    接收人 （多个接收人用逗号隔开）
  * @param $model    短信模板ID
  * @param $code   短信验证码
  * @return json
@@ -39,10 +39,13 @@ function send_sms($to, $model, $code)
     //短信模板ID
     switch ($model) {
         case 1:
-            $templateCode = 'SMS_173473936'; // 注册登录短信验证码模板
+            $templateCode = 'SMS_173478946'; // 发送短信验证码模板
             break;
         case 2:
-            $templateCode = $config['model_code_reset']; // 重置密码短信验证码模板
+			$templateCode = 'SMS_173473936'; // 发送短信通知模板
+            break;
+		case 3:
+			$templateCode = $config['model_code_reset']; // 重置密码短信验证码模板
             break;
     }
     //短信API产品名（短信产品名固定，无需修改）
