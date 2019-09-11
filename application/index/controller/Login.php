@@ -1,6 +1,12 @@
 <?php
 namespace app\index\controller;
-use think\Db;
+use \think\Db;
+use \think\View;
+use \think\Controller;
+use \think\Request;
+use \think\Model;
+
+
 class Login
 {
 
@@ -34,6 +40,8 @@ class Login
 			return $this->fetch();
 		}
 	}
+
+
 
     /**
      * @title 后台退出
