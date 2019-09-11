@@ -7,7 +7,7 @@ use think\Cache;
 
 class Index extends controller
 {
-	public function index(){
+/*	public function index(){
 		$menberId = 1;
 		$value = [1,2,3,4];
 		//这里的参数我就不多说了，多看手册。
@@ -15,10 +15,10 @@ class Index extends controller
 		$menberId = 2;
 		$value = [5,6,7,8];
 		cache('redis_value'.$menberId, $value);
-	}
+	}*/
 
 	//发送信息
-    public function send()
+/*    public function send()
     {
     	$data=[
     		'RegionId' => "cn-hangzhou",
@@ -27,10 +27,10 @@ class Index extends controller
 	        'TemplateCode' => "SMS_173473936",
     	];
 		aliyun_api('SendSms',$data);
-	}
+	}*/
 
 	//获取短信发送记录和发送状态
-	public function send_details(){
+/*	public function send_details(){
 		echo '<pre>';
 		$data= [
 			'RegionId' => "cn-hangzhou",
@@ -41,5 +41,5 @@ class Index extends controller
 		];
 		$result = aliyun_api('QuerySendDetails',$data);
 		dump($result);
-	}
+	}*/
 }
